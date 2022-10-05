@@ -14,41 +14,13 @@
           document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
           document.getElementById("changeTheme").textContent = "Change to Light Mode"
         }
-      }
-      function toggleTheme() {
-        if (localStorage.theme=="dark") {
-          localStorage.theme = "light";
-          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_light.css");
-          document.getElementById("changeTheme").textContent = "Change to Dark Mode";
+        else if (localStorage.theme==undefined) {
+          localStorage.theme = "light"
         }
-        else if (localStorage.theme=="light") {
-          localStorage.theme = "dark";
-          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css");
-          document.getElementById("changeTheme").textContent = "Change to Light Mode";
+        location.replace("homepage.html")
       }
-    }
     </script>
   </head>
   <body>
-    <div class="sidebar" id="sidebar">
-      <a class="active">Home</a>
-      <a href="./aboutpage.html">About Me</a>
-      <a href="./resume.html">Résumé</a>
-      <a href="./contact.html">Contact Me</a>
-    </div>
-    <div class="content">
-      <u><h1 id="page_title">Tate Rowney</h1></u>
-      <p class="subtitle"><strong>This is my elevator pitch!</strong></p>
-      <br>
-      <div class="image_container">
-        <img id="homepage_photo" src="Stable_diffusion.png" alt="A photo of myself">
-      </div>
-      <p>some text</p>
-      <br>
-      <p>some more text</p>
-    </div>
-    <footer class="footer">
-      <button id="changeTheme" type="button" class="changemode_button" onclick="toggleTheme()">Change to Dark Mode</button>
-    </footer>
   </body>
 </html>
