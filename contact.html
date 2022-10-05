@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- IMPORTANT: Please see homepage.html for more detailed comments!!! -->
+<html>
+  <head>
+    <title>Tate Rowney - Contact Me</title>
+    <link rel="stylesheet" href="TateRowney_light.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type=image/x-icon>
+    <script>
+      if (typeof(Storage) == "undefined") {
+        alert("Your browser doesn't have local storage enabled. Sorry!")
+      }
+      if (localStorage.theme=="dark") {
+        localStorage.theme = "dark";
+        document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
+        document.getElementById("changeTheme").textContent = "Change to Light Mode"
+      }
+      function toggleTheme() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "light";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_light.css");
+          document.getElementById("changeTheme").textContent = "Change to Dark Mode";
+        }
+        else if (localStorage.theme=="light") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css");
+          document.getElementById("changeTheme").textContent = "Change to Light Mode";
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <a href="./homepage.html">Home</a>
+      <a href="./aboutpage.html">About Me</a>
+      <a href="./resume.html">Résumé</a>
+      <a class="active">Contact Me</a>
+      <a href="./feedback.html">Give Feedback</a>
+    </div>
+    <div class="content">
+      <u><h1 id="page_title">Contact Me</h1></u>
+      <h2>Want to get in touch?</h2>
+      <ul>
+        <li><a class="major" href="mailto:trowney24@bayschoolsf.org">School Email</a></li>
+        <li><a class="major" href="mailto:taterowney@gmail.com">Personal Email</a></li>
+        <li>Phone Number: +1 (415)-265-8437</li>
+      <br>
+      <br>
+      <br>
+    </div>
+    <footer class="footer">
+      <button id="changeTheme" type="button" class="changemode_button" onclick="toggleTheme()">Change to Dark Mode</button>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tate Rowney - Homepage</title>
+    <link rel="stylesheet" href="TateRowney_light.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type=image/x-icon>
+    <script>
+    //Script to handle changing the theme/stylesheet
+    //I'm assuming that no one's gonna be viewing this on a browser without Javascript lol
+    //if the browser doesn't support localStorage, give them the bad news
+      if (typeof(Storage) == "undefined") {
+        alert("Your browser doesn't have local storage enabled. Theme change will not be supported. Sorry!")
+      }
+      //When the window finishes loading, check if they are already in Dark mode (if not, leave it in light mode by default)
+      window.onload = function() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
+          document.getElementById("changeTheme").textContent = "Change to Light Mode"
+        }
+      }
+      //This is called by the button in the footer
+      //If the theme is currently Dark, change it to light (and vice versa)
+      //also update the text on the button
+      function toggleTheme() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "light";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_light.css");
+          document.getElementById("changeTheme").textContent = "Change to Dark Mode";
+        }
+        else if (localStorage.theme=="light") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css");
+          document.getElementById("changeTheme").textContent = "Change to Light Mode";
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <!-- the navigation bar; the "active" one corrosponds to the page you are currently on -->
+    <div class="sidebar" id="sidebar">
+      <a class="active">Home</a>
+      <a href="./aboutpage.html">About Me</a>
+      <a href="./resume.html">Résumé</a>
+      <a href="./contact.html">Contact Me</a>
+      <a href="./feedback.html">Give Feedback</a>
+    </div>
+    <!-- The stuff in the center of the page-->
+    <div class="content">
+      <u><h1 id="page_title">Tate Rowney</h1></u>
+      <p class="subtitle"><strong>A motivated and avid student of mathematics, science, and programming.</strong></p>
+      <br>
+      <div class="image_container">
+        <img id="homepage_photo" src="school_photo.jpg" alt="A photo of myself">
+      </div>
+      <br>
+      <br>
+      <p>This website (coded by me) tells just a little about myself. Please feel free to look around using the menu to the left!</p>
+      <br>
+      <br>
+    </div>
+    <!-- Theme switch button -->
+    <footer class="footer">
+      <button id="changeTheme" type="button" class="changemode_button" onclick="toggleTheme()">Change to Dark Mode</button>
+    </footer>
+  </body>
+</html>

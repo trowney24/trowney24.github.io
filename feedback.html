@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<!-- IMPORTANT: Please see homepage.html for more detailed comments!!! -->
+<html>
+  <head>
+    <title>Tate Rowney - Give Feedback</title>
+    <link rel="stylesheet" href="TateRowney_light.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type=image/x-icon>
+    <!-- Import emailjs script-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- send email scripts (source: https://www.emailjs.com/docs/tutorial/creating-contact-form/)-->
+    <script type="text/javascript">
+        (function() {
+            // Public email key
+            emailjs.init('1E9HlbcnUsIVFYYFj');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('Message sent');
+                    }, function(error) {
+                        console.log('Failed to send message...', error);
+                    });
+            document.getElementById('contact-form').reset()
+            });
+            check_theme();
+        }
+    </script>
+    <!-- Switch theme (pretty much same as all the other pages)-->
+    <script type="text/javascript">
+      if (typeof(Storage) == "undefined") {
+        alert("Your browser doesn't have local storage enabled. Sorry!")
+      }
+      //this is now just a function called by the other window.onload function, because there can only be one
+      function check_theme() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
+          document.getElementById("changeTheme").textContent = "Change to Light Mode"
+        }
+      }
+      function toggleTheme() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "light";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_light.css");
+          document.getElementById("changeTheme").textContent = "Change to Dark Mode";
+        }
+        else if (localStorage.theme=="light") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css");
+          document.getElementById("changeTheme").textContent = "Change to Light Mode";
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <a href="./homepage.html">Home</a>
+      <a href="./aboutpage.html">About Me</a>
+      <a href="./resume.html">Résumé</a>
+      <a href="./contact.html">Contact Me</a>
+      <a class="active">Give Feedback</a>
+    </div>
+    <div class="content">
+      <u><h1 id="page_title">Give Feedback</h1></u>
+      <br>
+      <p>Want to give some feedback about the website?</p>
+        <!-- A tiny form to send an email via EmailJS with feedback from the user -->
+        <form id="contact-form" autocomplete="off">
+          <input type="hidden" name="contact_number">
+<!--        <label>Message</label> -->
+          <br>
+          <textarea rows="6" id="text_input" name="message" class="input_box" placeholder="Type your message here..."></textarea>
+          <br>
+<!--        <label>Name</label> -->
+          <br>
+          <input class="input_box" type="text" name="user_name" placeholder="Your name (optional)...">
+          <br>
+          <br>
+          <input id="send_button" type="submit" value="Send">
+        </form>
+    </div>
+    <footer class="footer">
+      <button id="changeTheme" type="button" class="changemode_button" onclick="toggleTheme()">Change to Dark Mode</button>
+    </footer>
+  </form>
+  </body>
+</html>

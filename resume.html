@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- IMPORTANT: Please see homepage.html for more detailed comments!!! -->
+<html>
+  <head>
+    <title>Tate Rowney - Résumé</title>
+    <link rel="stylesheet" href="TateRowney_light.css" type="text/css">
+    <link rel="shortcut icon" href="favicon.ico" type=image/x-icon>
+    <script>
+      if (typeof(Storage) == "undefined") {
+        alert("Your browser doesn't have local storage enabled. Sorry!")
+      }
+      window.onload = function() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
+          document.getElementById("changeTheme").textContent = "Change to Light Mode"
+        }
+      }
+      function toggleTheme() {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "light";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_light.css");
+          document.getElementById("changeTheme").textContent = "Change to Dark Mode";
+        }
+        else if (localStorage.theme=="light") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css");
+          document.getElementById("changeTheme").textContent = "Change to Light Mode";
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <a href="./homepage.html">Home</a>
+      <a href="./aboutpage.html">About Me</a>
+      <a class="active">Résumé</a>
+      <a href="./contact.html">Contact Me</a>
+      <a href="./feedback.html">Send Feedback</a>
+    </div>
+    <div class="content">
+      <u><h1 id="page_title">Résumé</h1></u>
+      <a class="major" href="Tate_Rowney_Resume.pdf" download>Download Résumé</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Formal Education:</h2>
+      <ul>
+        <li>
+          <a href="https://www.berkeley.edu/" target="_blank">University of California Berkeley</a>:
+          <a href="https://precollege.berkeley.edu/" target="_blank">Pre-College Scholars program</a>
+          <ul class="small_list">
+            <li class="small_list">Took accelerated version of U.C. Berkeley's Math N54 (Linear Algebra and Differential Equations), a class intended for college mathematics students.</li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://www.ucsc.edu/" target="_blank">University of California Santa Cruz</a>:
+          <a href="https://cosmos.ucsc.edu/" target="_blank">"COSMOS" Program </a>
+          <ul class="small_list">
+            <li class="small_list">A summer program for high school students intended to further learning outside of the normal scope of high school curriculum.</li>
+            <li class="small_list">Studied Feedback Control with Applications to Robotics (Cluster 11)</li>
+          </ul>
+        </li>
+        <li><a href="https://www.bayschoolsf.org/" target="_blank">The Bay School of San Francisco</a></li>
+        <li>San Francisco Waldorf Elementary and Middle School</li>
+      </ul>
+      <br>
+      <ul>
+      </ul>
+      <h2>Skills:</h2>
+      <ul>
+        <li>Significant programming experience in: <strong>Python</strong>, <strong>Arduino-C++</strong>, as well as some
+          experience with <strong>Java</strong>, <strong>HTML</strong>, <strong>Node.js</strong></li>
+          <ul>
+            <li class="small_list">Programs significantly as a hobby</li>
+            <li class="small_list">Projects include an experimental feedforward neural network, a re-creation of the popular game "Wordle", a 3d renderer built from scratch, and a simple version of the R.S.A. encryption algorithm.</li>
+          </ul>
+        <li>Possibly relevant course credits:</li>
+        <ul class="small_list">
+          <li class="small_list">Calculus</li>
+          <li class="small_list">Linear Algebra and Differential Equations (see above)</li>
+          <li class="small_list">Computer Science (currently enrolled)</li>
+          <li class="small_list">Feedback Control with Applications to Robotics (see above)</li>
+          <li class="small_list">Statistics (currently enrolled)</li>
+          <li class="small_list">Data Science (enrolled for 2023)</li>
+        </ul>
+      </ul>
+      <br>
+      <h2>Leadership Opportunities:</h2>
+      <ul>
+        <li>Bay School's "MARMOT" student group</li>
+        <ul>
+          <li class="small_list">A student leadership group focused on fixing, operating, and educating about technology at the Bay School</li>
+          <li class="small_list">Additionally becomes a part-time job during the summer</li>
+          <li class="small_list">Stands for: <strong>M</strong>agnanimous <strong>A</strong>ssistants <strong>R</strong>epairing <strong>M</strong>alfunctioning <strong>O</strong>ffice <strong>T</strong>echnology </li>
+        </ul>
+        <li>Currently leading Bay School's Math Club</li>
+        <ul>
+          <li class="small_list">I have discovered the hard way that running a club is similar to herding cats</li>
+        </ul>
+      </ul>
+      <br>
+      <h2>Work Opportunities</h2>
+      <ul>
+        <li>"MARMOT" student group</li>
+        <ul>
+          <li class="small_list">A part-time job during the summertime</li>
+          <li class="small_list">Assisting the Bay School's IT department in reparing and preparing the school for the coming year</li>
+        </ul>
+      </ul>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+    <footer class="footer">
+      <button id="changeTheme" type="button" class="changemode_button" onclick="toggleTheme()">Change to Dark Mode</button>
+    </footer>
+  </body>
+</html>

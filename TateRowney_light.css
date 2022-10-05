@@ -1,0 +1,186 @@
+/* Light theme stylesheet*/
+
+@font-face {
+    font-family:Calibri;
+    src: url(calibri-regular.ttf)
+}
+
+/* adjust the global text color and font */
+* {
+  color:black;
+  font-family: Calibri, sans-serif;
+}
+
+body {
+  background:#b0c3d6;
+}
+
+/* anything part of the .content class corrosponds to stuff which is NOT the sidebar or the footer*/
+
+div.content {
+  margin-left:25%
+}
+
+.content h2 {
+  color:inherit;
+  font-size:2vw;
+}
+
+.content ul {
+  font-size:2vw;
+  color:inherit;
+}
+
+.content li {
+  font-size:2vw;
+  margin-top:10px;
+  margin-bottom:10px;
+  color:inherit;
+}
+
+.content p {
+  color: inherit;
+  font-size:2.2vw;
+  text-align:left;
+}
+
+.content a {
+  text-decoration:none;
+  color:inherit;
+}
+
+.content a:hover{
+  font-weight:bold;
+}
+
+.content .small_list {
+  font-size:1.5vw;
+}
+
+.content a.major {
+  text-decoration:underline;
+  font-size:2.5vw;
+  color:inherit;
+}
+
+.content a.major:hover {
+  font-weight:bold;
+}
+
+.content .input_box {
+  background-color:#d3e5f5;
+  font-size:2vw;
+  border-width: 1px;
+  border-color:black;
+  border-radius:5px;
+  margin-left:10%;
+  width:40%;
+}
+
+.content #send_button {
+  margin-left:10%;
+  width:10%;
+  height:40px;
+  font-size: 1.5vw;
+  color:white;
+  background-color:#4a7296;
+  border-width:1px;
+  border-color:black;
+  border-radius:5px;
+}
+
+.content #send_button:hover {
+  background-color:#69a0d1;
+  box-shadow: 0 4px 8px 0 #87b0d4, 0 6px 20px 0 #87b0d4;
+}
+
+#page_title {
+  text-align:center;
+  font-size:5.5vw;
+  color: inherit;
+}
+
+footer {
+  align:right;
+  width:10%;
+  position:fixed;
+  bottom: 3%;
+  left: 0;
+  right: 3%;
+  height: 10%;
+  margin-left:87%;
+  background-color:#25394d;
+  border-radius:5px;
+}
+
+
+/* the footer button for changing theme */
+/*Not fully sure what's going on here. This wizardry is from https://www.w3schools.com/howto/howto_css_center_button.asp */
+button.changemode_button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height:80%;
+  width:80%;
+  background-color:gray;
+  border-radius:5px;
+  color:white;
+  font-size:1vw;
+}
+
+.content .subtitle {
+  text-align:center;
+  font-size:3vw;
+}
+
+.content .image_container {
+  text-align:center;
+}
+
+#homepage_photo {
+  position:relative;
+  justify-content:center;
+  align:center;
+  width:50% /* this is the total (100%) minus the left and right margins (30%) minus some extra space */
+}
+
+/* styling for the navigation bar */
+
+.sidebar {
+  margin-left:1%;
+  margin-bottom:10%;
+  margin-top:0%;
+  padding-top:10px;
+  background:white;
+  height:80%;
+  width:15%;
+  position:fixed;
+  overflow:auto;
+  background-color:#25394d;
+  border-radius:5px;
+}
+
+.sidebar a {
+  color:white;
+  font-size:2.75vw;
+  display:block;
+  padding: 5px;
+  padding-left:10px;
+  text-decoration:none;
+  padding-top:20px;
+  padding-bottom:20px;
+}
+
+/* the page currently being viewed will have this designation */
+
+.sidebar a.active {
+  color:#8c8d8f;
+}
+
+.sidebar a:hover {
+  background-color:#445e78;
+  border-radius:5px;
+}
