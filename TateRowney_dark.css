@@ -109,6 +109,10 @@ div.content {
   box-shadow: 0 4px 8px 0 #87b0d4, 0 6px 20px 0 #87b0d4;
 }
 
+.content table, tr, td, th {
+  border: 1px solid white;
+}
+
 #page_title {
   text-align:center;
   font-size:5.5vw;
