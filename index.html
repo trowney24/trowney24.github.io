@@ -11,8 +11,6 @@
       window.onload = function() {
         if (localStorage.theme=="dark") {
           localStorage.theme = "dark";
-          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
-          document.getElementById("changeTheme").textContent = "Change to Light Mode"
         }
         else if (localStorage.theme==undefined) {
           localStorage.theme = "light"
