@@ -18,6 +18,9 @@
           document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
           document.getElementById("changeTheme").textContent = "Change to Light Mode"
         }
+        else if (localStorage.theme==undefined) {
+          localStorage.theme = "light"
+        }
       }
       //This is called by the button in the footer
       //If the theme is currently Dark, change it to light (and vice versa)

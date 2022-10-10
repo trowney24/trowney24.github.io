@@ -8,10 +8,15 @@
       if (typeof(Storage) == "undefined") {
         alert("Your browser doesn't have local storage enabled. Sorry!")
       }
-      if (localStorage.theme=="dark") {
-        localStorage.theme = "dark";
-        document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
-        document.getElementById("changeTheme").textContent = "Change to Light Mode"
+      window.onload = function () {
+        if (localStorage.theme=="dark") {
+          localStorage.theme = "dark";
+          document.getElementsByTagName('link')[0].setAttribute("href", "TateRowney_dark.css")
+          document.getElementById("changeTheme").textContent = "Change to Light Mode"
+        }
+        else if (localStorage.theme==undefined) {
+          localStorage.theme = "light"
+        }
       }
       function toggleTheme() {
         if (localStorage.theme=="dark") {
