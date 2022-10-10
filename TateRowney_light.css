@@ -5,6 +5,16 @@
     src: url(calibri-regular.ttf)
 }
 
+html {
+  font-size:1vw;
+}
+
+@media screen and (max-width: 800px) {
+  html {
+    font-size:2vw;
+  }
+}
+
 /* adjust the global text color and font */
 * {
   color:black;
@@ -23,16 +33,16 @@ div.content {
 
 .content h2 {
   color:inherit;
-  font-size:2vw;
+  font-size:2rem;
 }
 
 .content ul {
-  font-size:2vw;
+  font-size:2rem;
   color:inherit;
 }
 
 .content li {
-  font-size:2vw;
+  font-size:2rem;
   margin-top:10px;
   margin-bottom:10px;
   color:inherit;
@@ -40,7 +50,7 @@ div.content {
 
 .content p {
   color: inherit;
-  font-size:2.2vw;
+  font-size:2.2rem;
   text-align:left;
 }
 
@@ -54,12 +64,12 @@ div.content {
 }
 
 .content .small_list {
-  font-size:1.5vw;
+  font-size:1.5rem;
 }
 
 .content a.major {
   text-decoration:underline;
-  font-size:2.5vw;
+  font-size:2.5rem;
   color:inherit;
 }
 
@@ -69,7 +79,7 @@ div.content {
 
 .content .input_box {
   background-color:#d3e5f5;
-  font-size:2vw;
+  font-size:2rem;
   border-width: 1px;
   border-color:black;
   border-radius:5px;
@@ -81,7 +91,7 @@ div.content {
   margin-left:10%;
   width:10%;
   height:40px;
-  font-size: 1.5vw;
+  font-size: 1.5rem;
   color:white;
   background-color:#4a7296;
   border-width:1px;
@@ -100,7 +110,7 @@ div.content {
 
 #page_title {
   text-align:center;
-  font-size:5.5vw;
+  font-size:5.5rem;
   color: inherit;
 }
 
@@ -132,12 +142,12 @@ button.changemode_button {
   background-color:gray;
   border-radius:5px;
   color:white;
-  font-size:1vw;
+  font-size:1rem;
 }
 
 .content .subtitle {
   text-align:center;
-  font-size:3vw;
+  font-size:3rem;
 }
 
 .content .image_container {
@@ -169,7 +179,7 @@ button.changemode_button {
 
 .sidebar a {
   color:white;
-  font-size:2.75vw;
+  font-size:2.75rem;
   display:block;
   padding: 5px;
   padding-left:10px;
